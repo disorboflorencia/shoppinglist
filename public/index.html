@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Metatags Copy-->
+    <meta name="description" content="ListaDeCompras" />
+    <meta name="keywords" content="lista de compras, asistente de compras" />
+    <meta name="author" content="Florencia Di Sorbo" />
+    <meta name="copyright" content="Florence2021" />
+    <!--Metatags Facebook-->
+    <meta property="og:title" content="Lista De Compras" />
+    <meta property="og:description" content="Lista De Compras" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://retolistadecompras.web.app/images/faviconCarritoDeComprasf.jpg" />
+    <meta property="og:url" content="https://retolistadecompras.web.app/" />
+    
+    <!--Metatags Twitter -->
+    <meta property="Twitter:title" content="Lista De Compras" />
+    <meta property="Twitter:description" content="Lista De Compras" />
+    <meta property="Twitter:type" content="website" />
+    <meta property="Twitter:image" content="https://retolistadecompras.web.app/images/faviconCarritoDeCompras.jpg" />
+    <meta property="Twitter:url" content="https://retolistadecompras.web.app/" />
+
+    <!--Link to JS -->
+    <script src="modal_script.js"></script>
+    <script src="lista.js"></script>
+    <!--Link to CSS-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tooltip_style.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="nuevoitem.css">
+    <!--Link icons-->
+    <script src="https://kit.fontawesome.com/3ccf09d09e.js" crossorigin="anonymous"></script>
+    <!--Link GoogleFonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <!--Link Favicon-->
+    <link rel="shortcut icon" href="images/faviconCarritoDeCompras.png" type="image/favicon">
+
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <header>
+        <!--Microformat SCHEMA -->
+        <div itemscope itemtype="schema.org/SoftwareApplication"></div>
+        <i class="fas fa-clipboard-list fa-2x"></i>
+        <h2><span itemprop="applicationCategory"></span>Mi Lista de Compras</span></h2>
+        </div>
+    </header>
+
+    <section class="container" id="container">
+        <div class="default" id="default">
+            <p>Aún no has agregado productos a tu lista !</p>
+            <i class="fas fa-heart-broken fa-9x"></i>
+        </div>
+
+        <ul id="listado" style="display: none;">
+            <li id="item">
+                <!-- Button trigger modal -->
+            </li>
+        </ul>
+        <!-- Trigger/Open The Modal -->
+        <div class="boton">
+            <div class="tooltip">
+            <button class="btn" id="agregar"><i class="fas fa-cart-plus fa-2x"></i></button><span class="tooltiptext">Agregar Item</span>
+            </div>
+        </div>     
+    </section>
+
+    <section id="nuevoItem" >
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                
+                <label for="categoria">Selecciona una Categoría</label>
+                <select id="categoria" name="categoria">
+                    <option value="images/alimentos.svg">Alimentos</option>
+                    <option value="images/bazar.svg">Bazar</option>
+                    <option value="images/bebidas.svg">Bebidas</option>
+                    <option value="images/electrodomestico.svg">Electrodomésticos</option>
+                    <option value="images/electronica.svg">Electrónica</option>
+                    <option value="images/perfumeria.svg">Perfumería</option>
+                    <option value="images/otro.svg">Otro</option>
+                </select>
+                
+                <label for="nombre" class="nombre" >¿Qué quieres comprar?</label>
+                <input type="text" id="nombre" name="nombre" placeholder="ej.: caramelos">
+
+                <label for="descripcion">Agrega un comentario :</label>
+                <input type="text" id="descripcion" name="descripcion" placeholder="ej.: mentolados">
+
+                <input type="submit" value="Agregar" id="agregado">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="detalle__item" >
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <img  id="modal-header" class="iconos" src="" alt="">  <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

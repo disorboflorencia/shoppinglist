@@ -1,0 +1,41 @@
+.btn-primary {
+    background-color: rgba(0,188,212, 0.1);
+    color: #455A64;
+    padding: 5px 10px 5px 10px;
+    border: #00BCD4;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+.btn-secondary{
+    background-color: #00BCD4;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Quicksand', sans-serif;
+}
+
+ul{
+    list-style: none;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline-start: 15px;
+    
+}
+
+li{
+    width: 95%;
+    align-content: center;
+}
