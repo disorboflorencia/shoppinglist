@@ -142,8 +142,8 @@ li{
 }
 
 .btn-primary {
-    background-color: #00BCD4;
-    color: #455A64;
+    background-color: rgba(0,188,212, 0.1);
+    color:#455A64; 
     padding: 5px 10px 5px 10px;
     border: #00BCD4;
     border-radius: 4px;
